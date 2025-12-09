@@ -1,0 +1,18 @@
+{
+    "format_version": "2.98.76543210",
+    "glmn:block_1": {
+        "sound": "sound_1"
+    },
+    "glmn:block_2": {
+        "sound": "sound_2"
+    },
+    "glmn:block_3": {
+        "sound": "sound_3"
+    },
+    "glmn:block_4": {
+        "sound": "sound_4"
+    },
+    "glmn:block_5": {
+        "sound": "sound_5"
+    }
+}

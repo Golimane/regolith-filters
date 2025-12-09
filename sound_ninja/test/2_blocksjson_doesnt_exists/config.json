@@ -1,0 +1,45 @@
+{
+	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.6.json",
+	"author": "Golimane",
+	"name": "sound_ninja test",
+	"packs": {
+		"behaviorPack": "./packs/BP",
+		"resourcePack": "./packs/RP"
+	},
+	"regolith": {
+		"dataPath": "./data",
+		"filterDefinitions": {
+			"filter_tester": {
+				"url": "github.com/Bedrock-OSS/regolith-filters",
+				"version": "1.0.0"
+			},
+			"sound_ninja": {
+				"runWith": "python",
+				"script": "../../sound_ninja.py"
+			}
+		},
+		"formatVersion": "1.6.0",
+		"profiles": {
+			"default": {
+				"export": {
+					"readOnly": true,
+					"target": "local"
+				},
+				"filters": [
+					{
+						"filter": "sound_ninja",
+						"settings": {
+							"formatVersion": "2.98.76543210"
+						}
+					},
+					{
+						"filter": "filter_tester",
+						"settings": {
+							"errors_stop_execution": false
+						}
+					}
+				]
+			}
+		}
+	}
+}

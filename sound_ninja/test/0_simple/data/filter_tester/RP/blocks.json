@@ -1,0 +1,48 @@
+{
+    "format_version": "1.21.40",
+    "glmn:old_block_0": {
+        "sound": "old_sound_0"
+    },
+    "glmn:old_block_1": {
+        "sound": "old_sound_1"
+    },
+    "glmn:old_block_2": {
+        "sound": "old_sound_2"
+    },
+    "glmn:old_block_3": {
+        "sound": "old_sound_3"
+    },
+    "glmn:old_block_4": {
+        "sound": "old_sound_4"
+    },
+    "glmn:old_block_5": {
+        "sound": "old_sound_5"
+    },
+    "glmn:old_block_6": {
+        "sound": "old_sound_6"
+    },
+    "glmn:old_block_7": {
+        "sound": "old_sound_7"
+    },
+    "glmn:old_block_8": {
+        "sound": "old_sound_8"
+    },
+    "glmn:old_block_9": {
+        "sound": "old_sound_9"
+    },
+    "glmn:block_1": {
+        "sound": "sound_1"
+    },
+    "glmn:block_2": {
+        "sound": "sound_2"
+    },
+    "glmn:block_3": {
+        "sound": "sound_3"
+    },
+    "glmn:block_4": {
+        "sound": "sound_4"
+    },
+    "glmn:block_5": {
+        "sound": "sound_5"
+    }
+}

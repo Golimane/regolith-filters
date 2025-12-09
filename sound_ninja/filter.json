@@ -1,0 +1,11 @@
+{
+  "description": "A Filter to extracts block sounds from the behavior pack and updates the resource pack's blocks.json with these sounds.",
+  "exportData": false,
+  "filters": [
+    {
+      "runWith": "python",
+      "script": "./sound_ninja.py"
+    }
+  ],
+	"version": "1.0.0"
+}
