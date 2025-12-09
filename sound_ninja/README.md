@@ -34,7 +34,7 @@ This will add a key in `RP/blocks.json` such as:
 
 ## How to install ?
 simply run in your regolith folder:
-`regolith install github.com/Golimane/sound_ninja`
+`regolith install github.com/Golimane/regolith-filters/sound_ninja`
 then add it to your profile
 
 
