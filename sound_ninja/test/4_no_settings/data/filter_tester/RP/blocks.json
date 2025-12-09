@@ -30,6 +30,9 @@
     "glmn:old_block_9": {
         "sound": "old_sound_9"
     },
+    "glmn:block_1": {
+        "sound": "sound_1"
+    },
     "glmn:block_2": {
         "sound": "sound_2"
     },

@@ -2,14 +2,15 @@
   "format_version": "1.21.120",
   "minecraft:block": {
     "description": {
-      "identifier": "glmn:block_1",
-      "name": "Block 1",
+      "identifier": "glmn:block_3",
+      "name": "Block 3",
+      // THIS IS A COMMENT
+      "sound": "sound_3",
       "menu_category": {
         "category": "nature",
         "is_hidden_in_commands": false
       }
     },
-    // THIS IS A COMMENT
     "components": {}
   }
 }

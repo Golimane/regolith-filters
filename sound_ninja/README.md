@@ -62,9 +62,13 @@ You can add multiple settings in the filter:
   - `behaviorPack`: path to the build behavior pack, default is set to `./BP` 
   - `resourcePack`: path to the build resource pack, default is set to `./RP`
   - `formatVersion`: if the filde `[RP]/blocks.json` is not specified, the filter will create one with this format_version, default set to "1.21.40"
-  - `forceSound`: (On work) when set, will force block with no sound definition to this value
+  - `debug`: if set to True, the script will print every block_path with no `sound` reference, default is set to False
+  - `default`: when set, will force block with no sound definition to this value
 
 
 ## Changelog
+  # 1.0.1
+    - New parameters `debug` & `default` in settings. See `Settings` section for more details:
+    - Fixing bug when no settings are provided
   # 1.0.0
     - First public version of the filter

@@ -11,7 +11,7 @@ DEFAULT_FORMAT_VERSION: str = "1.21.40"
 BP_DEFAULT_PATH: str = "./BP"
 RP_DEFAULT_PATH: str = "./RP"
 
-def get_block_tuples(BP: BehaviorPack) -> List[Tuple[str, str]]:
+def get_block_tuples(BP: BehaviorPack, debug: bool, default: Optional[str]) -> List[Tuple[str, str]]:
     """
     Extracts block identifiers and their associated sounds from all JSON files in the given behavior pack.
 
@@ -32,7 +32,10 @@ def get_block_tuples(BP: BehaviorPack) -> List[Tuple[str, str]]:
 
         # with open(file_path, 'r', encoding='utf-8') as fb:
         sound: Optional[str] = block.data.get("minecraft:block", {}).get("description", {}).get("sound")
-        if sound is not None:
+        if sound is None:
+            if debug: print(f"WARNING: {identifier} has no sound reference in description ({block.filepath})")
+            if default is not None: block_tuples.append((identifier, default))
+        else:
             block_tuples.append((identifier, sound))
     return block_tuples
 
@@ -164,12 +167,32 @@ def initProject(settings: Dict[str, Any]) -> Project:
 
     return project
 
+def getSettings() -> Dict[str, Any]:
+    """
+    Returns the settings parsed from the first command-line argument as JSON,
+    or an empty dictionary if no argument is provided.
+
+    Raises:
+        SystemExit: if the provided JSON is invalid.
+    """
+    if len(sys.argv) > 1:
+        try:
+            return commentjson.loads(sys.argv[1])
+        except commentjson.JSONLibraryException as e:
+            print(f"Error parsing settings JSON: {e}")
+            raise SystemExit
+    else:
+        return {}
 
 def main():
-    settings: Dict[str, Any] = commentjson.loads(sys.argv[1])
-    project = initProject(settings)
+    settings: List[str, Any] = getSettings()
+    project: Project = initProject(settings)
     
-    block_tuples: List[Tuple[str, str]] = get_block_tuples(project.behavior_pack)
+    block_tuples: List[Tuple[str, str]] = get_block_tuples(
+        project.behavior_pack,
+        settings.get("debug", False),
+        settings.get("default", None)
+    )
             
     update_block_sounds(
         Path(project.resource_pack.input_path).resolve() / "blocks.json",

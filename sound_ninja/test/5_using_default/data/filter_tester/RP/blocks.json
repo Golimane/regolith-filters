@@ -30,14 +30,17 @@
     "glmn:old_block_9": {
         "sound": "old_sound_9"
     },
+    "glmn:block_1": {
+        "sound": "DEFAULT_SOUND"
+    },
     "glmn:block_2": {
-        "sound": "sound_2"
+        "sound": "DEFAULT_SOUND"
     },
     "glmn:block_3": {
         "sound": "sound_3"
     },
     "glmn:block_4": {
-        "sound": "sound_4"
+        "sound": "DEFAULT_SOUND"
     },
     "glmn:block_5": {
         "sound": "sound_5"
