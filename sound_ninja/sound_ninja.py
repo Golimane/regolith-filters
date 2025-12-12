@@ -30,13 +30,14 @@ def get_block_tuples(BP: BehaviorPack, debug: bool, default: Optional[str]) -> L
             print(f"Warning: {block.filepath} has no identifier, skipping...")
             continue
 
-        # with open(file_path, 'r', encoding='utf-8') as fb:
-        sound: Optional[str] = block.data.get("minecraft:block", {}).get("description", {}).get("sound")
-        if sound is None:
+        try:
+            sound: Optional[str] = block.pop_jsonpath("minecraft:block/description/sound")
+            block_tuples.append((identifier, sound))
+        except reticulator.AssetNotFoundError:
             if debug: print(f"WARNING: {identifier} has no sound reference in description ({block.filepath})")
             if default is not None: block_tuples.append((identifier, default))
-        else:
-            block_tuples.append((identifier, sound))
+        block.save()
+            
     return block_tuples
 
 

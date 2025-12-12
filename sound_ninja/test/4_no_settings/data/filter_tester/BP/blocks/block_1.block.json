@@ -4,13 +4,11 @@
     "description": {
       "identifier": "glmn:block_1",
       "name": "Block 1",
-      "sound": "sound_1",
       "menu_category": {
         "category": "nature",
         "is_hidden_in_commands": false
       }
     },
-    // THIS IS A COMMENT
     "components": {}
   }
 }

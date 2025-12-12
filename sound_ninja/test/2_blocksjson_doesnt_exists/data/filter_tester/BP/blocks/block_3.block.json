@@ -4,8 +4,6 @@
     "description": {
       "identifier": "glmn:block_3",
       "name": "Block 3",
-      // THIS IS A COMMENT
-      "sound": "sound_3",
       "menu_category": {
         "category": "nature",
         "is_hidden_in_commands": false

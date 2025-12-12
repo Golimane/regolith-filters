@@ -4,14 +4,12 @@
     "description": {
       "identifier": "glmn:block_5",
       "name": "Block 5",
-      "sound": "sound_5",
       "menu_category": {
         "category": "nature",
         "is_hidden_in_commands": false
       }
     },
     "components": {
-    // THIS IS A COMMENT
     }
   }
 }

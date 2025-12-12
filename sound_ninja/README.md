@@ -67,6 +67,9 @@ You can add multiple settings in the filter:
 
 
 ## Changelog
+  # 1.0.2
+    - Now remove the "sound" key in block description after saving it
+    - Unfotunatelly the script does not keep the json comments if it found a sound ref
   # 1.0.1
     - New parameters `debug` & `default` in settings. See `Settings` section for more details:
     - Fixing bug when no settings are provided

@@ -1,11 +1,9 @@
 {
   "format_version": "1.21.120",
   "minecraft:block": {
-    // THIS IS A COMMENT
     "description": {
       "identifier": "glmn:block_4",
       "name": "Block 4",
-      "sound": "sound_4",
       "menu_category": {
         "category": "nature",
         "is_hidden_in_commands": false

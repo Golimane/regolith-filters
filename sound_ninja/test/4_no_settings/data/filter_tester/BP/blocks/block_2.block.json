@@ -4,10 +4,8 @@
     "description": {
       "identifier": "glmn:block_2",
       "name": "Block 2",
-      "sound": "sound_2",
       "menu_category": {
         "category": "nature",
-        // THIS IS A COMMENT
         "is_hidden_in_commands": false
       }
     },
